@@ -3,6 +3,10 @@ class ChefsController < ApplicationController
   def new
     @chef=Chef.new
   end
+  def index
+    @chefs=Chef.all
+  end
+  
   # the name, email, password will be recieved by create action
   def create
     @chef=Chef.new(chef_params)
